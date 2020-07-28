@@ -1,6 +1,6 @@
 FROM tomcat:7
 
-MAINTAINER vijay_margam
+MAINTAINER vamshi
 
 WORKDIR /home/master/git/maven/webapp1-master
 ADD ./target/*.war /home/master/git/maven/webapp1-master/tomcat
