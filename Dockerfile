@@ -1,4 +1,4 @@
-FROM tomcat:7
+FROM tomcat:8.0-alpine
 
 MAINTAINER vijay_margam
 
