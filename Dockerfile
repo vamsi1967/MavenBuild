@@ -7,7 +7,7 @@ WORKDIR $CATALINA_HOME
 
 #FROM tomcat:8.0-alpine
 
-#MAINTAINER vamshi
+MAINTAINER vamshi
 # let "Tomcat Native" live somewhere isolated
 ENV TOMCAT_NATIVE_LIBDIR $CATALINA_HOME/native-jni-lib
 ENV LD_LIBRARY_PATH ${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$TOMCAT_NATIVE_LIBDIR
@@ -136,7 +136,7 @@ RUN set -e \
 #WORKDIR /home/master/git/maven/webapp1-master
 #ADD ./target/*.war /home/master/git/maven/webapp1-master/tomcat
 
-#COPY ./tomcat-users.xml /home/master/git/maven/webapp1-master/tomcat/tomcat-users.xml
+COPY ./tomcat-users.xml /home/master/git/maven/webapp1-master/tomcat/tomcat-users.xml
 
 #EXPOSE 8082
 COPY /root/.jenkins/workspace/maven-github/target/*.war $CATALINA_HOME/webapps/
